@@ -5,69 +5,83 @@ import hinhTron from './assets/Vector.png';
 import dauChamHoi from './assets/Vector1.png';
 import dauBeHon from './assets/Vector_(1).png'
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Screen1 from './Screen/Screen1';
+import Screen2 from './Screen/Screen2';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
+  // return (
+  //   <View style={styles.container}>
       
-        <View style={styles.header}>
-            <Image source={imgDienThoaiMau} style={{width: 258, height: 319 }}/>
-        </View>
+  //       <View style={styles.header}>
+  //           <Image source={imgDienThoaiMau} style={{width: 258, height: 319 }}/>
+  //       </View>
 
-        <View style={styles.gomNhom}>
+  //       <View style={styles.gomNhom}>
 
-        <View style={styles.headerBot}>
-              <Text style={styles.text}>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
-        </View>
+  //       <View style={styles.headerBot}>
+  //             <Text style={styles.text}>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
+  //       </View>
 
-        <View style={styles.mid}>
-              <Image source={ngoiSao} style={styles.ngoiSao}/>
-              <Image source={ngoiSao} style={styles.ngoiSao}/>
-              <Image source={ngoiSao} style={styles.ngoiSao}/>
-              <Image source={ngoiSao} style={styles.ngoiSao}/>
-              <Image source={ngoiSao} style={styles.ngoiSao}/>
-              <Text style={styles.text1}>(Xem 828 đánh giá)</Text>
-        </View> 
+  //       <View style={styles.mid}>
+  //             <Image source={ngoiSao} style={styles.ngoiSao}/>
+  //             <Image source={ngoiSao} style={styles.ngoiSao}/>
+  //             <Image source={ngoiSao} style={styles.ngoiSao}/>
+  //             <Image source={ngoiSao} style={styles.ngoiSao}/>
+  //             <Image source={ngoiSao} style={styles.ngoiSao}/>
+  //             <Text style={styles.text1}>(Xem 828 đánh giá)</Text>
+  //       </View> 
 
-        <View style={styles.midBot}>
-                <View>
-                <Text style={styles.text2}>1.790.000 đ</Text>
-                </View>
+  //       <View style={styles.midBot}>
+  //               <View>
+  //               <Text style={styles.text2}>1.790.000 đ</Text>
+  //               </View>
                 
-                <View style={styles.midBotItem2}>
-                <Text style={styles.text3}>1.790.000 đ</Text>
-                </View>
+  //               <View style={styles.midBotItem2}>
+  //               <Text style={styles.text3}>1.790.000 đ</Text>
+  //               </View>
                 
-        </View>
+  //       </View>
 
-        <View style={styles.midBotBot}>
-              <Text style={styles.text4}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
-              <View style={styles.imgChamHoi}>
-              <ImageBackground source={dauChamHoi} style={{width: 6.67, height: 11.67, alignItems: 'center', justifyContent: 'center',}}>
-                  <Image source={hinhTron}/>
-              </ImageBackground>
-              </View>
+  //       <View style={styles.midBotBot}>
+  //             <Text style={styles.text4}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
+  //             <View style={styles.imgChamHoi}>
+  //             <ImageBackground source={dauChamHoi} style={{width: 6.67, height: 11.67, alignItems: 'center', justifyContent: 'center',}}>
+  //                 <Image source={hinhTron}/>
+  //             </ImageBackground>
+  //             </View>
            
-        </View>
+  //       </View>
       
-        </View>
+  //       </View>
 
-        <View style={styles.botHead}>
-          <View style={styles.rectangle}>
-          <Text style={styles.text5}>4 MÀU-CHỌN MÀU</Text>
-          <Image source={dauBeHon} style={{left: 70}}></Image>
-          </View>
+  //       <View style={styles.botHead}>
+  //         <View style={styles.rectangle}>
+  //         <Text style={styles.text5}>4 MÀU-CHỌN MÀU</Text>
+  //         <Image source={dauBeHon} style={{left: 70}}></Image>
+  //         </View>
          
-        </View>
+  //       </View>
 
-       <View style={styles.bot}>
-              <TouchableOpacity style={styles.touchAble}>
-                  <Text style={styles.text6}>
-                      CHỌN MUA
-                  </Text>
-              </TouchableOpacity>
-        </View> 
-    </View>
+  //      <View style={styles.bot}>
+  //             <TouchableOpacity style={styles.touchAble}>
+  //                 <Text style={styles.text6}>
+  //                     CHỌN MUA
+  //                 </Text>
+  //             </TouchableOpacity>
+  //       </View> 
+  //   </View>
+  // );
+  return (
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name='Home' component={Screen1}/>
+          <Stack.Screen name='PickColors' component={Screen2}/>
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 

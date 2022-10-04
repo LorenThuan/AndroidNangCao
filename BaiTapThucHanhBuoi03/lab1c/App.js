@@ -17,11 +17,29 @@ export default function App() {
             <Text style={styles.txttitle3}>Enter ontime password sent on {'\n'} ++849092605798</Text>
       </View>
       <View style={styles.center4}>
-      <SafeAreaView>
-      <CodeField
-        cellCount={CELL_COUNT}
-      />
-    </SafeAreaView>
+          <View style={styles.contentCenter4}>
+
+          </View>
+
+          <View style={styles.contentCenter4}>
+
+          </View>
+
+          <View style={styles.contentCenter4}>
+            
+          </View>
+
+          <View style={styles.contentCenter4}>
+            
+          </View>
+
+          <View style={styles.contentCenter4}>
+            
+          </View>
+
+          <View style={styles.contentCenter4}>
+            
+          </View>
       </View>
       <View style={styles.center5}>
             <TouchableOpacity style={styles.btbtouch}>
@@ -36,7 +54,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5F4F5',
+    backgroundColor: '#00CCF9'
     // alignItems: 'center',
     // justifyContent: 'center',
   },
@@ -100,9 +118,14 @@ const styles = StyleSheet.create({
   },
   btbtouch: {
     backgroundColor: '#E3C000',
-    width: 385,
+    width: 340,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  contentCenter4: {
+   width: 50, 
+   height: 50, 
+   borderWidth: 1
   }
 });

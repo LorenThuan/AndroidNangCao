@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, Alert } from 'react-native';
 import AddTodoInPut from './component/AddTodoInput';
 import FlatListDemo from './component/FlatListDemo';
@@ -9,6 +9,10 @@ export default function App() {
   const handleAddTask = (task) => {
     setLists([...lists,task]);
   }
+
+
+  
+  
 
   const handleDeleteTask = (index) => {
       // alert(index);

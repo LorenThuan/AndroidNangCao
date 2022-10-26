@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-n
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.bgColor2, styles.container]}>
       <View style={styles.circle}>
         <Image source={require('./assets/circle.png')} style={styles.imgcircle}></Image>
       </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
     textAlign: 'center',
     lineHeight: 29.3,
-    marginTop: 90,
+    marginTop: 70,
   },
   title2: {
     fontWeight: 'bold',
@@ -107,6 +107,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     fontFamily: 'Roboto',
+  },
+  bgColor2: {
+    backgroundColor: 'rgba(196, 196, 196, 0)'
   }
 });
 
